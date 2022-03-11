@@ -415,6 +415,7 @@ footer{
   padding: 2rem;
   color: white;
   flex-direction: row;
+  margin-top: 2rem;
 }
 
 footer a{

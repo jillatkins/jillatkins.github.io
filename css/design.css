@@ -80,7 +80,7 @@ u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
+header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 	/* margin: 0; */
 	padding: 0;
@@ -90,7 +90,7 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
@@ -189,6 +189,46 @@ input, select, textarea {
 		}
 
 /* Type */
+
+@font-face {
+	font-family: 'fa-Solid-900';
+	src: url('../fonts/fa-solid-900.woff2') format('woff2'),
+		 url('../fonts/fa-solid-900.woff') format('woff');
+  }
+  
+  @font-face {
+	font-family: 'FA-Brands-400';
+	src: url('../fonts/fa-brands-400.woff2') format('woff2'),
+		 url('../fonts/fa-brands-400.woff') format('woff');
+  }
+  
+  .fa-plus:before {
+  content: "\f067";
+  }
+  
+  .fa-linkedin:before {
+  content: "\f08c";
+  }
+  
+  .fa-github:before {
+	content: "\f09b";
+  }
+  
+  .fa-code:before {
+	content: "\f121";
+  }
+  
+  .fas {
+  font-family: 'fa-Solid-900';
+  font-weight: 900;
+  font-style: normal;
+  }
+  
+  .fab {
+  font-family: 'FA-Brands-400';
+  font-weight: 400;
+  font-style: normal;
+  }
 
 	body, input, select, textarea {
 		color: #a0a0a1;
