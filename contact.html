@@ -67,7 +67,7 @@
   <main class="form-page">
     <div class="container">
       <h2>Get in Touch</h2>
-      <form action="https://formsubmit.co/61ff288c9e3a1512f48f771ad54bafff" method="POST" class="form-container" >
+      <form action="https://formsubmit.co/61ff288c9e3a1512f48f771ad54bafff" method="POST" onsubmit="return ajaxpost()" class="form-container" id="contactForm" >
           <!-- HONEYPOT -->
           <input type="text" name="_honey" style="display: none;"/>
           <!-- DISABLE CAPTCHA-->
@@ -120,6 +120,31 @@
     </div>
   </footer>
 
+  <script>
+    function ajaxpost () {
+      // (A) GET FORM DATA
+      var form = document.getElementById("contactForm");
+      var data = new FormData(form);
+    
+      // (B) AJAX REQUEST
+      // (B1) POST DATA TO SERVER, RETURN RESPONSE AS TEXT
+      fetch("https://jillatkins.github.io/contact.html", { method:"POST", body:data })
+      .then(res=>res.text())
+    
+      // (B2) SHOW MESSAGE ON SERVER RESPONSE
+      .then((response) => {
+        console.log(response);
+        if (response == "OK") { alert("SUCCESSFUL!"); }
+        else { alert("FAILURE!"); }
+      })
+    
+      // (B3) OPTIONAL - HANDLE FETCH ERROR
+      .catch((err) => { console.error(err); });
+    
+      // (C) PREVENT FORM SUBMIT
+      return false;
+    } 
+  </script>
 
   <!-- Scripts -->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
