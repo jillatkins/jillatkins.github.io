@@ -374,6 +374,41 @@ input:required:focus:valid{
     background: #fff url(../img/checkmark.png) no-repeat 98% center;
 }
 
+.success-text{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.success-text h2{
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 0.05rem;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.success-text p{
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.home-link{
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  background-color: #373737;
+  border-radius: 1rem 0;
+  margin: 0 6rem 2rem 6rem;
+}
+
+.home-link:hover{
+  background-color: #707070;
+  color: #39e6c6;
+} 
+
+
 /* FOOTER */
 footer{
   background-color: #373737;

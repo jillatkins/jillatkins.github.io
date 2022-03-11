@@ -67,11 +67,13 @@
   <main class="form-page">
     <div class="container">
       <h2>Get in Touch</h2>
-      <form action="https://formsubmit.co/61ff288c9e3a1512f48f771ad54bafff" method="POST" onsubmit="return ajaxpost()" class="form-container" id="contactForm" >
+      <form action="https://formsubmit.co/61ff288c9e3a1512f48f771ad54bafff" method="POST" class="form-container" >
           <!-- HONEYPOT -->
           <input type="text" name="_honey" style="display: none;"/>
-          <!-- DISABLE CAPTCHA-->
+          <!-- DISABLE CAPTCHA -->
           <input type="hidden" name="_captcha" value="false"/>
+          <!-- SUCCESS PAGE REDIRECT -->
+          <input type="hidden" name="_next" value="https://jillatkins.github.io/success.html">
           <div>
               <label for="name">Name<span class="required">*</span></label>
               <input type="text" id="name" name="name" placeholder="Avery Doe" required minlength="2" autofocus/>
@@ -119,32 +121,6 @@
 
     </div>
   </footer>
-
-  <script>
-    function ajaxpost () {
-      // (A) GET FORM DATA
-      var form = document.getElementById("contactForm");
-      var data = new FormData(form);
-    
-      // (B) AJAX REQUEST
-      // (B1) POST DATA TO SERVER, RETURN RESPONSE AS TEXT
-      fetch("contact.html", { method:"POST", body:data })
-      .then(res=>res.text())
-    
-      // (B2) SHOW MESSAGE ON SERVER RESPONSE
-      .then((response) => {
-        console.log(response);
-        if (response == "OK") { alert("SUCCESSFUL!"); }
-        else { alert("FAILURE!"); }
-      })
-    
-      // (B3) OPTIONAL - HANDLE FETCH ERROR
-      .catch((err) => { console.error(err); });
-    
-      // (C) PREVENT FORM SUBMIT
-      return false;
-    } 
-  </script>
 
   <!-- Scripts -->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
