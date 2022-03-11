@@ -170,7 +170,7 @@ body{
   text-decoration: none;
   color: #707070;
   padding-left: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 header nav{
@@ -192,7 +192,7 @@ ul{
 }
 
 .logo{
-  padding: 1.25rem;
+  padding: 1rem;
   align-items: center;
 }
 
@@ -632,11 +632,11 @@ footer a{
   }
 
   .menu-links li{  
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .menu-links a{
-    font-size: 1.275rem;
+    font-size: 1.25rem;
   }
 
 }
